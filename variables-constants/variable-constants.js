@@ -86,3 +86,62 @@ function greeting (name, grade) {
 console.log (greeting('김효경', 'VIP'))
 
 
+//----------------------------------------------------------------------------------
+// 2. 배송비 계산
+
+// 주문 금액과 배송 지역을 입력받아 배송비를 계산하는 함수를 작성합니다.
+
+// 배송비 정책
+//  
+// - 주문 금액이 50,000원 이상 : 무료 배송
+// - 제주/도서 지역 : 추가 배송비 3,000원
+// - 배송지역 값 예시 : "서울", "부산", "제주", "도서"
+// - 일반 지역 : 기본 배송비 3,000원
+// - 주문 금액이 0원 이하인 경우 : 0 반환
+// - 배송지역이 빈 문자열인 경우 : 기본 배송비 적용
+
+// function deliveryFee(price, area) {
+//   const basePrice = 3000
+//   const additionalPrice = 3000
+  
+//   const isCharged = area === '제주' || area === '도서'
+// }
+
+
+
+//----------------------------------------------------------------------------------
+// 3. 비밀번호 유효성 검사
+
+// 비밀번호 문자열을 입력받아 유효성 검사를 수행하는 함수를 작성합니다.
+
+// 비밀번호 규칙
+
+// - 최소 8자 이상
+// - 최대 20자 이하
+// - 위 조건을 모두 만족하면 true, 아니면 false 반환
+
+function isValidPassword (password) {
+  const minPasswordLength = 8
+  const maxPasswordLength = 20
+  const passwordLength = String(password).length
+
+  return passwordLength >= minPasswordLength && passwordLength <= maxPasswordLength
+}
+
+console.log (isValidPassword(12358))
+console.log (isValidPassword(1564890231015))
+
+
+// 4. 포인트 적립 계산
+
+// 결제 금액과 회원 등급을 입력받아 적립될 포인트를 계산하는 함수를 작성합니다.
+
+// 포인트 적립률
+// 
+// - VIP : 결제 금액의 5%
+// - GOLD : 결제 금액의 3%
+// - SILVER : 결제 금액의 1%
+// - 일반 : 결제 금액의 0.5%
+// 
+// [예] VIP 회원이 100,000원 결제 시 → 5,000 포인트 적립
+//
