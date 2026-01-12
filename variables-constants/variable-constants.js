@@ -100,12 +100,20 @@ console.log (greeting('김효경', 'VIP'))
 // - 주문 금액이 0원 이하인 경우 : 0 반환
 // - 배송지역이 빈 문자열인 경우 : 기본 배송비 적용
 
-// function deliveryFee(price, area) {
-//   const basePrice = 3000
-//   const additionalPrice = 3000
+function deliveryFee(orderPrice, area) {
+  const freeOrderPrice = 50000
+  const baseOrderFee = 3000
+  const additionalFee = 3000
   
-//   const isCharged = area === '제주' || area === '도서'
-// }
+  const isCharge = area === '제주' || area === '도서'
+  const isFree = orderPrice >= 50000 || orderPrice === 0
+
+  const totalPrice = !isFree * (basePrice + isCharge * additionalFee)
+
+  return totalPrice
+  }
+console.log(100000, '제주')
+
 
 
 
@@ -137,7 +145,6 @@ console.log (isValidPassword(1564890231015))
 // 결제 금액과 회원 등급을 입력받아 적립될 포인트를 계산하는 함수를 작성합니다.
 
 // 포인트 적립률
-// 
 // - VIP : 결제 금액의 5%
 // - GOLD : 결제 금액의 3%
 // - SILVER : 결제 금액의 1%
@@ -145,3 +152,148 @@ console.log (isValidPassword(1564890231015))
 // 
 // [예] VIP 회원이 100,000원 결제 시 → 5,000 포인트 적립
 //
+
+
+
+function rewardingPoints(price, grade) {
+
+  const rewardingRate = {
+    VIP : 0.05,
+    GOLD : 0.03,
+    SILVER : 0.01,
+    NORMAL : 0.005
+  }
+  // 수정 전
+  // const priceAsGrade = rewardingRate[grade] * price
+  // return priceAsGrade
+
+  // 수정 후
+  //grade가 'NORMAL'일 때만 일반 회원으로 인식함. 즉, 기본값 처리가 없음.
+  const rate = rewardingRate[grade] || rewardingRate.NORMAL
+  return rate * price
+  }
+
+console.log(rewardingPoints(100000, 'VIP'))
+
+// function rewardingPoints(grade, orderPrice) {
+// const rewardRate = {   
+//   VIP : 0.05,
+//   GOLD : 0.03,
+//   SILVER : 0.01,
+//   NORMAL : 0.005,
+// }
+// const memberRate = rewardRate[grade] || rewardRate.NORMAL
+//   return parseInt(orderPrice) * memberRate
+
+// }
+
+// console.log(rewardingPoints('VIP', 100000))
+// console.log(rewardingPoints('GOLD', 100000))
+// console.log(rewardingPoints('SILVER', 100000))
+// console.log(rewardingPoints('NORMAL', 100000))
+
+
+
+
+// 5. 영화 티켓 가격 계산
+
+// 영화 정보와 관람 인원을 입력받아 총 결제 금액을 계산하는 함수를 작성합니다.
+
+// 요금 정책
+// 
+// - 일반 영화: 14,000원
+// - 3D 영화: 17,000원
+// - IMAX 영화: 20,000원
+// - 조조 할인(10시 이전 상영): 20% 할인
+// - 영화타입 값 : "일반", "3D", "IMAX"
+// - 조조할인여부 값 : true 또는 false
+// 
+// [예] 3D 영화, 조조 상영, 2명 관람 → 27,200원 결제
+//
+
+function getTicket(type, number, isJojo) {
+  const discountJojo = 0.2
+
+  const theatreType = {
+    NORMAL : 14_000,
+    '3D' : 17_000,
+    IMAX : 20_000,
+  }
+
+  const ticketPrice = (theatreType[type] || theatreType.NORMAL) * (1- isJojo * discountJojo) * number
+  return ticketPrice
+}
+
+console.log(getTicket('', 3, true)+'원')
+console.log(getTicket('3D', 2, true)+'원')
+
+
+
+
+
+// 서버 응답: 사용자 포인트 예시
+{
+  let userPoint = 0
+
+if (userPoint == 0) { 
+  // 사용자 포인트가 0이므로 조건은 참 (실행)
+  console.log('🎉 첫 구매이군요. 포인트 결제가 가능합니다!')
+  // 결제하기 버튼 활성화 (사용자가 0원에 결제 가능)
+}
+}
+
+
+// 서버 응답: 네트워크 오류로 인해 포인트 데이터를 못 가져옴
+{
+  let userPoint = null // 또는 false
+
+// 🚨 비상! 시스템 오류로 포인트가 null이지만, 느슨한 비교(==)를 사용함
+if (userPoint == 0) { 
+  console.log('🎉 첫 구매이군요. 포인트 결제가 가능합니다!')
+  // 결제하기 버튼 활성화 (사용자가 0원에 결제 가능)
+} else {
+  // 데이터가 null이나 false인 경우, 안전하게 오류 처리가 가능함
+  console.log('⚠️ 데이터를 불러오지 못했습니다. 다시 시도해 주세요.')
+}
+
+}
+
+
+// 서버 응답: 사용자 포인트 예시
+let userPoint = 0
+
+if (userPoint == null) { 
+  // 사용자 포인트가 0이므로 조건은 참 (실행)
+  console.log('🎉 첫 구매이군요. 포인트 결제가 가능합니다!')
+  // 결제하기 버튼 활성화 (사용자가 0원에 결제 가능)
+} else {
+  // 데이터가 null이나 false인 경우, 안전하게 오류 처리가 가능함
+  console.log('⚠️ 데이터를 불러오지 못했습니다. 다시 시도해 주세요.')
+}
+
+
+if (userPoint === null) {
+  console.log('🎉 첫 구매이군요. 포인트 결제가 가능합니다!')
+  // 결제하기 버튼 활성화 (사용자가 0원에 결제 가능)
+} else {
+  // 데이터가 null이나 false인 경우, 안전하게 오류 처리가 가능함
+  console.log('⚠️ 데이터를 불러오지 못했습니다. 다시 시도해 주세요.')
+}
+
+
+{
+function getTicket(type, number, isJojo) {
+  const priceOption = {
+    NORMAL : 14000,
+    '3D' : 17000,
+    IMAX : 20000
+  }
+  const discountJojo = 0.2
+
+  const totalFee = (priceOption[type] || priceOption.NORMAL) * (1 - discountJojo * isJojo) * number
+  return totalFee
+}
+
+console.log(getTicket('3D', 2, true))
+
+}
