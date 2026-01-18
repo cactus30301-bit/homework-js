@@ -1,8 +1,6 @@
 # 프론트엔드 부트캠프 과제 저장소
 
-**16기 김효경**
-
-## JavaScrip
+## JavaScript
 
 - [2주차 과제](/src/md/retrospect_2nd.md)
 - [3주차 과제](/src/md/retrospect_3rd.md)
