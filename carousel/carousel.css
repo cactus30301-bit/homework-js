@@ -1,16 +1,29 @@
-.recommendedgames {
-  background-color: #ffc;
-  border: 5px solid red;
+.games-wrapper {
+  background-color: #fff;
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+  padding: 10px;
   width: 384px;
   height: 372px;
   display: grid;
+  grid-template-columns: 125px minmax(200px, 2fr);
+
+  .moregame {
+    display: inline;
+    align-items: center;
+  }
+
+  .more {
+    width: 136px;
+    height: 36px;
+    font-size: 18px;
+    color: #333;
+    font-weight: 700;
+    text-decoration: none;
+  }
 }
 
-/* .moregame {
-  display: flex;
-} */
-
-figure {
+.game {
   position: relative;
 }
 
@@ -26,4 +39,16 @@ figure {
 
 .char {
   z-index: 2;
+}
+
+.games-wrapper ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.games-wrapper li {
+  width: 160px;
+  flex-shrink: 0;
 }
