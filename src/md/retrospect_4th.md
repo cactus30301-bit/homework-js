@@ -13,8 +13,8 @@ dataset이랄지, 어떻게 탭 버튼과 탭 패널 간 액션 리액션을 연
 다시 한번 머릿 속에 새기는 계기가 되었다.    
 
 되도록이면 배운 내용을 뒤져보거나 검색해보며 하나씩 해 보는 것이 좋고,  
-내 머릿속에도 더 잘 남고, 나중을 위해서도 더 좋았겠지만... 
-다른 한편으로는 심적, 시간적 여유가 부족해서 학창시절 공부하던 때 기억을 되살려 
+내 머릿속에도 더 잘 남고, 나중을 위해서도 더 좋았겠지만...  
+다른 한편으로는 심적, 시간적 여유가 부족해서 학창시절 공부하던 때 기억을 되살려  
 정답이 있는 문제면 그냥 답지를 빨리 보고 습득하자 라는...  
 정도에 벗어나는 마음으로 임했던 것 같다.   
 
@@ -34,11 +34,11 @@ getElementsByClassName() 으로 얻은 HTMLCollection에 신나게 갖다 붙이
 
 그리고 나서 tab button의 data-target과 tab panel의 id를 어떻게 연결할지 아무리 생각해도 모르겠어서...    
 (이미 머릿속에 있는 지식을 꺼내오기란 왜 이렇게 어려운걸까요...)
-```const targetSelector = button.dataset.target; ```
+```const targetSelector = button.dataset.target; ```  
 ```const targetPanel = document.getElementById(targetSelector);```
 이 부분을 다시 알게 되었다.  
-targetSelector 변수를 만드는데, 그게 ⭐dataset⭐의 target을 가리키게 하고,
-targetPanel 변수를 만들어서! getElementById로 선택된 targetSelector로 Id를 반환할 수 있게 한다!!
+targetSelector 변수를 만드는데, 그게 ⭐dataset⭐의 target을 가리키게 하고,  
+targetPanel 변수를 만들어서! getElementById로 선택된 targetSelector로 Id를 반환할 수 있게 한다!!  
 
 
 # - 회고
