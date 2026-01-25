@@ -33,8 +33,8 @@ getElementsByClassName() 으로 얻은 HTMLCollection에 신나게 갖다 붙이
 과제를 통해 머리로 달달 외우는 식이 아닌 경험을 통한 습득이 이루어진 것에 큰 보람을 느꼈다.  
 
 그리고 나서 tab button의 data-target과 tab panel의 id를 어떻게 연결할지 아무리 생각해도 모르겠어서...    
-(이미 머릿속에 있는 지식을 꺼내오기란 왜 이렇게 어려운걸까요...)
-```const targetSelector = button.dataset.target; ```  
+(이미 머릿속에 있는 지식을 꺼내오기란 왜 이렇게 어려운걸까요...)  
+```const targetSelector = button.dataset.target; ```<br>
 ```const targetPanel = document.getElementById(targetSelector);```
 이 부분을 다시 알게 되었다.  
 targetSelector 변수를 만드는데, 그게 ⭐dataset⭐의 target을 가리키게 하고,  
