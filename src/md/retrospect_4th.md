@@ -44,8 +44,9 @@ targetPanel 변수를 만들어서! getElementById로 선택된 targetSelector�
 # - 회고
 
 지난한 한 주 였다.  
+
   
 
 # 노트정리
 
-https://www.notion.so/01-12-16-26-4-2ec45198373f801ea8e1cab8a7d55178?source=copy_link
+https://www.notion.so/5-2f345198373f80e1a103d5b4303c188d?source=copy_link
