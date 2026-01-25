@@ -2,5 +2,6 @@
 
 ## JavaScript
 
-- [2주차 과제](/src/md/retrospect_2nd.md)
-- [3주차 과제](/src/md/retrospect_3rd.md)
+- [2주차 회고](/src/md/retrospect_2nd.md)
+- [3주차 회고](/src/md/retrospect_3rd.md)
+- [3주차 회고](/src/md/retrospect_4th.md)

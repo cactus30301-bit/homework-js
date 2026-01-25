@@ -45,6 +45,9 @@ targetPanel 변수를 만들어서! getElementById로 선택된 targetSelector�
 
 지난한 한 주 였다.  
 
+내가 여태 쉽게 살아왔구나... 생각이 들었다.  
+
+
   
 
 # 노트정리
