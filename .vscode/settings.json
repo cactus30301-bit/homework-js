@@ -1,4 +1,5 @@
 {
   // "window.zoomLevel": 3.5
-  "editor.glyphMargin": true
+  "editor.glyphMargin": true,
+  "editor.formatOnSave": true
 }
