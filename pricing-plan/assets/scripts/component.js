@@ -2,7 +2,7 @@
 
 const planCards = document.querySelectorAll(".plan-card");
 const info = document.querySelector(".selection-info");
-console.log(planCards);
+// const highlight = document.querySelector(".highlight");
 
 for (const planCard of planCards) {
   planCard.addEventListener("click", (e) => {
@@ -19,6 +19,7 @@ for (const planCard of planCards) {
 
     const planName = planCard.dataset.name;
     const planPrice = planCard.dataset.price;
+    // highlight.textContent = planCard.dataset.name;
     info.textContent = `${planName} 플랜(${planPrice})을 선택하셨습니다.`;
   });
 }
