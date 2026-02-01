@@ -6,10 +6,16 @@ console.log(planCards);
 
 for (const planCard of planCards) {
   planCard.addEventListener("click", (e) => {
-    planCards.forEach((planCard) => planCard.classList.remove("clicked"));
+    const isClicked = planCard.classList.contains("clicked");
 
-    planCard.classList.add("clicked");
-    info.classList.add("clicked");
+    if (isClicked) {
+      planCard.classList.remove("clicked");
+      info.classList.remove("clicked");
+    } else {
+      planCards.forEach((planCard) => planCard.classList.remove("clicked"));
+      planCard.classList.add("clicked");
+      info.classList.add("clicked");
+    }
 
     const planName = planCard.dataset.name;
     const planPrice = planCard.dataset.price;
