@@ -1,5 +1,10 @@
 {
   "dependencies": {
     "live-server": "^1.2.2"
+  },
+  "devDependencies": {
+    "@html-eslint/eslint-plugin": "^0.54.2",
+    "@html-eslint/parser": "^0.54.0",
+    "eslint": "^9.39.2"
   }
 }
