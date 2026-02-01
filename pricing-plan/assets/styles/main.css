@@ -41,6 +41,7 @@ body {
       background-color: #E8EFFD;
       border: 2px solid #055FEA;
       box-shadow: 0 0 0 4px #D2E0F9;
+      transform: translateY(-10px);
       &::after{
         content: url(../icon-checkmark.svg);
         position: absolute;
@@ -89,5 +90,31 @@ body {
 
 }
 
+
+
+.selection-info {
+  display: none;
+
+  &.clicked {
+  display: inline-flex;
+ position: absolute;
+  offset: 50%;
+  transform: translateY(249px);
+
+
+  
+  padding: 24px 32px;
+  background-color: #fff ;
+  border-radius: 100px;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 0 16px rgba(30, 38, 60, 0.10);
+
+  .highlight{
+    color: #407EEE;
+  }
 }
 
+}
+
+}

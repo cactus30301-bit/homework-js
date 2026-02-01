@@ -8,7 +8,7 @@
     <link rel="icon" href="./assets/best-price.png" type="image/png" />
     <link rel="stylesheet" href="/assets/fonts/noto-sans-kr.css" />
     <link rel="stylesheet" href="./assets/styles/main.css" />
-    <script type="module" src="./assets/scripts/component.js"></script>
+    <script src="./assets/scripts/component.js" defer></script>
   </head>
   <body >
 <div class="plan-wrapper">
@@ -21,7 +21,7 @@
           </ul>
       </article> -->
 
-      <article class="plan-card " data-name="basic">
+      <article class="plan-card " data-name="Basic" data-price=" 무료 ">
         <strong class="plan-name">BASIC</strong>
           <h1 class="plan-price">Free</h1>
           <div class="divider"></div>
@@ -32,7 +32,7 @@
           </ul>
       </article>
   
-          <article class="plan-card clicked" data-name="standard">
+          <article class="plan-card " data-name="Standard" data-price=" 15,000원 ">
         <strong class="plan-name">STANDARD</strong>
           <h1 class="plan-price">₩15,000</h1>
           <div class="divider"></div>
@@ -44,7 +44,7 @@
           </ul>
       </article>
   
-      <article class="plan-card" data-name="premium">
+      <article class="plan-card" data-name="Premium" data-price=" 30,000원 ">
         <strong class="plan-name">PREMIUM</strong>
           <h1 class="plan-price">₩30,000</h1>
           <div class="divider"></div>
@@ -55,9 +55,8 @@
             <li>초기 설정 컨설팅</li>
           </ul>
       </article>
+      <p class="selection-info"> 플랜()을 선택하셨습니다.</p>
 </div>
-
-<p>플랜()을 선택하셨습니다.</p>
 
   </body>
 </html>
